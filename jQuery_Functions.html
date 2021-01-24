@@ -73,7 +73,6 @@
         <p>Click button to show hidden paragraph</p>
         <button>.show</button><br>
         <p1 style="display: none">What's good?</p1>
-        <p1 style="display: none">What's good?</p1>
     </div>
     <br>
     <hr>
@@ -180,9 +179,6 @@
     <div id="ex14">
         <h1>14) .html</h1>
         <p>Testing...</p>
-        <p1></p1><br>
-        <p1></p1><br>
-        <p1></p1><br>
     </div>
     <br>
     <hr>
@@ -300,9 +296,8 @@
         $("#ex13 p").append("<b>I wouldn't be here today If the old school didn't pave the way<b>");
 
         // 14) .html demo
-        var count = 0;
-        count += 1
-        $("#ex14 p1").html(count);
+        var replace = "Hello";
+        $("#ex14 p").html(replace);
 
         // 15) .attr demo
         $("#ex15 input")
