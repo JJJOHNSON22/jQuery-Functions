@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <style>
+        #ex2 div {
+            background: #ece023;
+            width: 30px;
+            height: 40px;
+            margin: 2px;
+            float: left;
+        }
+        
+        #ex5 div {
+            background: #de9a44;
+            margin: 3px;
+            width: 80px;
+            height: 40px;
+            display: none;
+            float: left;
+        }
+        
+        #ex6 div {
+            background: #de9a44;
+            margin: 3px;
+            width: 80px;
+            height: 40px;
+            display: none;
+            float: left;
+        }
+        
+        p {
+            color: red;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        .selected {
+            color: blue;
+        }
+        
+        .highlight {
+            color: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <!--1) .click demo-->
+    <div id="ex1">
+        <h1>1) .click</h1>
+        <p>Click button to slide this paragraph up</p>
+        <button>.click</button>
+    </div>
+    <br>
+    <hr>
+
+    <!--2) .hide demo-->
+    <div id="ex2">
+        <h1>2) .hide</h1>
+        <p>Click a yellow box to hide it</p>
+        <div></div>
+    </div>
+    <br><br><br>
+    <hr>
+
+    <!--3) .show demo-->
+    <div id="ex3">
+        <h1>3) .show</h1>
+        <p>Click button to show hidden paragraph</p>
+        <button>.show</button><br>
+        <p1 style="display: none">What's good?</p1>
+        <p1 style="display: none">What's good?</p1>
+    </div>
+    <br>
+    <hr>
+
+    <!--4) .toggle demo-->
+    <div id="ex4">
+        <h1>4) .toggle</h1>
+        <p>Click the button to toggle the paragraph</p>
+        <button>.toggle</button>
+        <p1>Hi!</p1>
+        <p1 style="display: none">See ya!</p1>
+    </div>
+    <br>
+    <hr>
+
+    <!--5) .click demo-->
+    <div id="ex5">
+        <h1>5) .slideDown</h1>
+        <p>Click button to slide this paragraph down</p>
+        <button>.slideDown</button><br>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br><br><br>
+    <hr>
+
+    <!--6) .slideUp demo-->
+    <div id="ex6">
+        <h1>6) .slideUp</h1>
+        <p>Click button to slide this paragraph up</p>
+        <button>.slideUp</button><br>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br><br><br>
+    <hr>
+
+    <!--7) .slideToggle demo-->
+    <div id="ex7">
+        <h1>7) .slideToggle</h1>
+        <p>Click button to toggle slide for this paragraph</p>
+        <button>.slideToggle</button><br>
+        <p1>This is a paragraph with words!</p1>
+    </div>
+    <br>
+    <hr>
+
+    <!--8) .fadeIn demo-->
+    <div id="ex8">
+        <h1>8) .fadeIn</h1>
+        <p>Click button to fade in this paragraph</p>
+        <button>.fadeIn</button><br>
+        <p1 style="display: none">This is a hidden paragraph!</p1>
+    </div>
+    <br>
+    <hr>
+
+    <!--9) .fadeOut demo-->
+    <div id="ex9">
+        <h1>9) .fadeOut</h1>
+        <p>Click button to fade out this paragraph</p>
+        <button>.fadeOut</button><br>
+        <p1>This paragraph is nice and visible!</p1>
+    </div>
+    <br>
+    <hr>
+
+    <!--10) .addClass demo-->
+    <div id="ex10">
+        <h1>10) .addClass</h1>
+        <p>The paragraph below is blue</p>
+        <p>The paragraph above is false, this paragraph is selected</p>
+    </div>
+    <br>
+    <hr>
+
+    <!--11) .before demo-->
+    <div id="ex11">
+        <h1>11) .before</h1>
+        <p>I turned 24!</p>
+    </div>
+    <br>
+    <hr>
+
+    <!--12) .after demo-->
+    <div id="ex12">
+        <h1>12) .after</h1>
+        <p>Today</p>
+    </div>
+    <br>
+    <hr>
+
+    <!--13) .append demo-->
+    <div id="ex13">
+        <h1>13) .append</h1>
+        <p>What more can I say, </p>
+    </div>
+    <br>
+    <hr>
+
+    <!--14) .html demo-->
+    <div id="ex14">
+        <h1>14) .html</h1>
+        <p>Testing...</p>
+        <p1></p1><br>
+        <p1></p1><br>
+        <p1></p1><br>
+    </div>
+    <br>
+    <hr>
+
+    <!--15) .attr demo-->
+    <div id="ex15">
+        <h1>15) .attr</h1>
+        <input id="check1" type="checkbox" checked="checked">
+        <label for="check1">Check this box</label>
+        <p></p>
+    </div>
+    <br>
+    <hr>
+
+    <!--16) .val demo-->
+    <div id="ex16">
+        <h1>16) .val</h1>
+        <p></p>
+
+        <select id="single">
+            <option>Single</option>
+            <option>Single2</option>
+        </select>
+
+        <select id="multiple" multiple="multiple">
+            <option selected="selected">Multiple</option>
+            <option>Multiple2</option>
+            <option selected="selected">Multiple3</option>
+        </select>
+    </div>
+    <br>
+    <hr>
+
+    <!--17) .text demo-->
+    <div id="ex17">
+        <h1>17) .text</h1>
+        <p><b>Test</b> paragraph</p>
+        <p></p>
+    </div>
+    <br>
+    <hr>
+
+    <script>
+        // 1) .click demo
+        var count = 0;
+        $("#ex1 button").click(function() {
+            count += 1
+            $("#ex1 p").html(count);
+            $("#ex1 p").slideUp();
+        });
+
+        // 2) .hide demo
+        for (var i = 0; i < 5; i++) {
+            $("<div>").appendTo("#ex2");
+        }
+        $("#ex2 div").click(function() {
+            $(this).hide(2000, function() {
+                $(this).remove();
+            });
+        });
+
+        // 3) .show demo
+        $("#ex3 button").click(function() {
+            $("#ex3 p1").show("slow");
+        });
+
+        // 4) .toggle demo
+        $("#ex4 button").click(function() {
+            $("#ex4 p1").toggle();
+        });
+
+        // 5) .slideDown demo
+        $("#ex5 button").click(function() {
+            if ($("#ex5 div").first().is(":hidden")) {
+                $("#ex5 div").slideDown("slow");
+            } else {
+                $("#ex5 div").hide();
+            }
+        });
+
+        // 6) .slideUp demo
+        $("#ex6 button").click(function() {
+            if ($("#ex6 div").first().is(":hidden")) {
+                $("#ex6 div").show("slow");
+            } else {
+                $("#ex6 div").slideUp();
+            }
+        });
+
+        // 7) .slideToggle demo
+        $("#ex7 button").click(function() {
+            $("#ex7 p1").slideToggle("slow");
+        });
+
+        // 8) .fadeIn demo
+        $("#ex8 button").click(function() {
+            $("#ex8 p1").fadeIn("slow");
+        });
+
+        // 9) .fadeOut demo
+        $("#ex9 button").click(function() {
+            $("#ex9 p1").fadeOut("slow");
+        });
+
+        // 10) .addClass demo
+        $("#ex10 p").last().addClass("selected");
+
+        // 11) .before demo
+        $("#ex11 p").before("<b>Today,<b>");
+
+        // 12) .after demo
+        $("#ex12 p").after("<b>was a good day!<b>");
+
+        // 13) .append demo
+        $("#ex13 p").append("<b>I wouldn't be here today If the old school didn't pave the way<b>");
+
+        // 14) .html demo
+        var count = 0;
+        count += 1
+        $("#ex14 p1").html(count);
+
+        // 15) .attr demo
+        $("#ex15 input")
+            .change(function() {
+                var $input = $(this);
+                $("#ex15 p").html(".attr( 'checked' ): <b>" + $input.attr("checked") + "</b><br>" +
+                    ".prop( 'checked' ): <b>" + $input.prop("checked") + "</b><br>" +
+                    ".is( ':checked' ): <b>" + $input.is(":checked") + "</b>");
+            })
+            .change();
+
+        // 16) .val demo
+        function displayVals() {
+            var singleValues = $("#single").val();
+            var multipleValues = $("#multiple").val() || [];
+            $("#ex16 p").html("<b>Single:</b> " + singleValues +
+                " <b>Multiple:</b> " + multipleValues.join(", "));
+        }
+        $("select").change(displayVals);
+        displayVals();
+
+        // 17) .text demo
+        var str = $("#ex17 p").first().text();
+        $("#ex17 p").last().html(str);
+    </script>
+
+</body>
+
+</html>
